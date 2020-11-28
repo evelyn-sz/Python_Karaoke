@@ -54,3 +54,9 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Haggard", self.room_2.song_played_artist)
         self.assertEqual("Andrew Bird", self.room_3.song_played_artist)
         self.assertEqual("Tony Anderson", self.room_4.song_played_artist)
+
+    def test_room_starts_with_no_guests(self):
+        self.assertEqual(0, self.room_1.guest_count())
+
+    # def test_room_can_check_in_guest(self):
+    #     self.asserEqual("Lou", )

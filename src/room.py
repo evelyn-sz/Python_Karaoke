@@ -7,9 +7,13 @@ class Room:
         self.till = till
         self.song_played_title = song_played_title
         self.song_played_artist = song_played_artist
+        self.guest_list= []
 
-    def check_in_guest(self):
-        pass
+    def guest_count(self):
+        return(len(self.guest_list))
+
+    # def check_in_guest(self, guest):
+    #     self.guest_list.append(guest)
 
     def play_song(self):
         pass
