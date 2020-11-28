@@ -18,3 +18,9 @@ class TestRoom(unittest.TestCase):
         self.room_2 = Room("Balkanarama", 14, 100, "{Song.title}", "{Song.artist}")
         self.room_3 = Room("Hopsasa", 16, 80, "{Song.title}", "{Song.artist}")
         self.room_4 = Room("Zen", 18, 90, "{Song.title}", "{Song.artist}")
+
+    def test_room_has_room_name(self):
+        self.assertEqual("String quartet", self.room_1.room_name)
+        self.assertEqual("Balkanarama", self.room_2.room_name)
+        self.assertEqual("Hopsasa", self.room_3.room_name)
+        self.assertEqual("Zen", self.room_4.room_name)
