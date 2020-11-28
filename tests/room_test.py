@@ -24,3 +24,9 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Balkanarama", self.room_2.room_name)
         self.assertEqual("Hopsasa", self.room_3.room_name)
         self.assertEqual("Zen", self.room_4.room_name)
+
+    def test_room_has_capacity(self):
+        self.assertEqual(20, self.room_1.capacity)
+        self.assertEqual(14, self.room_2.capacity)
+        self.assertEqual(16, self.room_3.capacity)
+        self.assertEqual(18, self.room_4.capacity)
