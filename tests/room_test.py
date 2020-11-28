@@ -30,3 +30,9 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(14, self.room_2.capacity)
         self.assertEqual(16, self.room_3.capacity)
         self.assertEqual(18, self.room_4.capacity)
+
+    def test_room_has_till(self):
+        self.assertEqual(200, self.room_1.till)
+        self.assertEqual(100, self.room_2.till)
+        self.assertEqual(80, self.room_3.till)
+        self.assertEqual(90, self.room_4.till)
