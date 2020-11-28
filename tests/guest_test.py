@@ -2,7 +2,7 @@ import unittest
 
 from src.guest import Guest
 from src.song import Song
-from src.room import Room
+# from src.room import Room
 
 class TestGuest(unittest.TestCase):
 
@@ -15,7 +15,9 @@ class TestGuest(unittest.TestCase):
         self.guest_2 = Guest("Milo", 47, "Selig", "Helium Vola")
         self.guest_3 = Guest("Fin", 50, "Three white horses", "Andrew Bird")
         self.guest_4 = Guest("Camyla", 40, "Spiriteaux", "Tony Anderson")
-        self.room_1 = Room("String quartet", 20, 200, "{Song.title}", "{Song.artist}")
-        self.room_2 = Room("Balkanarama", 14, 100, "{Song.title}", "{Song.artist}")
-        self.room_3 = Room("Hopsasa", 16, 80, "{Song.title}", "{Song.artist}")
-        self.room_4 = Room("Zen", 18, 90, "{Song.title}", "{Song.artist}")
+
+    def test_guest_has_name(self):
+        self.assertEqual("Lou", self.guest_1.name)
+        self.assertEqual("Milo", self.guest_2.name)
+        self.assertEqual("Fin", self.guest_3.name)
+        self.assertEqual("Camyla", self.guest_4.name)
