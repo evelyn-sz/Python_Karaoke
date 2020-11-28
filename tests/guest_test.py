@@ -27,3 +27,15 @@ class TestGuest(unittest.TestCase):
         self.assertEqual(47, self.guest_2.budget)
         self.assertEqual(50, self.guest_3.budget)
         self.assertEqual(40, self.guest_4.budget)
+
+    def test_guest_has_fav_song_title(self):
+        self.assertEqual("Indifferent Suns", self.guest_1.fav_song_title)
+        self.assertEqual("Selig", self.guest_2.fav_song_title)
+        self.assertEqual("Three white horses", self.guest_3.fav_song_title)
+        self.assertEqual("Spiriteaux", self.guest_4.fav_song_title)
+
+    def test_guest_has_fav_song_artist(self):
+        self.assertEqual("Dark Tranquillity", self.guest_1.fav_song_artist)
+        self.assertEqual("Helium Vola", self.guest_2.fav_song_artist)
+        self.assertEqual("Andrew Bird", self.guest_3.fav_song_artist)
+        self.assertEqual("Tony Anderson", self.guest_4.fav_song_artist)
