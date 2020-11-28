@@ -14,16 +14,22 @@ class TestRoom(unittest.TestCase):
         self.guest_2 = Guest("Milo", 47, "Selig", "Helium Vola")
         self.guest_3 = Guest("Fin", 50, "Three white horses", "Andrew Bird")
         self.guest_4 = Guest("Camyla", 40, "Spiriteaux", "Tony Anderson")
-        self.room_1 = Room("String quartet", 20, 200, self.song_1.title, self.song_1.artist)
-        self.room_2 = Room("Balkanarama", 14, 100, self.song_2.title, self.song_2.artist)
-        self.room_3 = Room("Hopsasa", 16, 80, self.song_3.title, self.song_3.artist)
-        self.room_4 = Room("Zen", 18, 90, self.song_4.title, self.song_4.artist)
+        self.room_1 = Room("String quartet", 11, 20, 200, self.song_1.title, self.song_1.artist)
+        self.room_2 = Room("Balkanarama", 7, 14, 100, self.song_2.title, self.song_2.artist)
+        self.room_3 = Room("Hopsasa", 8, 16, 80, self.song_3.title, self.song_3.artist)
+        self.room_4 = Room("Zen", 9, 18, 90, self.song_4.title, self.song_4.artist)
 
     def test_room_has_room_name(self):
         self.assertEqual("String quartet", self.room_1.room_name)
         self.assertEqual("Balkanarama", self.room_2.room_name)
         self.assertEqual("Hopsasa", self.room_3.room_name)
         self.assertEqual("Zen", self.room_4.room_name)
+
+    def test_room_has_entry_price(self):
+        self.assertEqual(11, self.room_1.entry_price)
+        self.assertEqual(7, self.room_2.entry_price)
+        self.assertEqual(8, self.room_3.entry_price)
+        self.assertEqual(9, self.room_4.entry_price)
 
     def test_room_has_capacity(self):
         self.assertEqual(20, self.room_1.capacity)
