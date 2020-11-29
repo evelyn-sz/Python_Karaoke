@@ -19,7 +19,7 @@ class Room:
         for guest in self.guest_list:
             if guest_name == guest.name:
                 return True
-            else:
+        else:
                 return False
 
     def collect_entry_fee(self):

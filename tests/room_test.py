@@ -84,20 +84,20 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Camyla", self.room_4.guest_list[3].name)
         self.assertEqual(4, self.room_4.guest_count())
 
-    # def test_room_can_look_up_guest(self):
-    #     self.room_4.check_in_guest(self.guest_1)
-    #     self.room_4.check_in_guest(self.guest_2)
-    #     self.room_4.check_in_guest(self.guest_3)
-    #     self.room_4.check_in_guest(self.guest_4)
+    def test_room_can_look_up_guest(self):
+        self.room_4.check_in_guest(self.guest_1)
+        self.room_4.check_in_guest(self.guest_2)
+        self.room_4.check_in_guest(self.guest_3)
+        self.room_4.check_in_guest(self.guest_4)
 
-    #     self.assertEqual(True, self.room_4.search_guest(self.guest_1.name))
-    #     self.assertEqual(True, self.room_4.search_guest(self.guest_2.name))
-    #     # self.assertEqual(True, self.room_4.search_guest(self.guest_3.name))
-    #     # self.assertEqual(True, self.room_4.search_guest(self.guest_4.name))
+        self.assertEqual(True, self.room_4.search_guest(self.guest_1.name))
+        self.assertEqual(True, self.room_4.search_guest(self.guest_2.name))
+        self.assertEqual(True, self.room_4.search_guest(self.guest_3.name))
+        self.assertEqual(True, self.room_4.search_guest(self.guest_4.name))
 
-    #     # self.assertEqual(False, self.room_1.search_guest(self.guest_3))
-    #     # self.assertEqual(False, self.room_2.search_guest(self.guest_2))
-    #     # self.assertEqual(False, self.room_3.search_guest(self.guest_1))
+        self.assertEqual(False, self.room_1.search_guest(self.guest_3))
+        self.assertEqual(False, self.room_2.search_guest(self.guest_2))
+        self.assertEqual(False, self.room_3.search_guest(self.guest_1))
 
     def test_till_increses_by_each_entry_fee(self):
         self.assertEqual(107, self.room_2.collect_entry_fee())
