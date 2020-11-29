@@ -15,6 +15,9 @@ class Room:
     def check_in_guest(self, guest):
         self.guest_list.append(guest)
 
+    def collect_entry_fee(self):
+        pass
+
     def play_song(self):
         pass
 
@@ -23,5 +26,4 @@ class Room:
 
     def check_out_guest(self):
         pass
-
 

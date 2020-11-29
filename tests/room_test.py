@@ -59,7 +59,34 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(0, self.room_1.guest_count())
 
     def test_room_can_check_in_guest(self):
+
         self.room_1.check_in_guest(self.guest_1)
         self.assertEqual("Lou", self.room_1.guest_list[0].name)
         self.assertEqual(1, self.room_1.guest_count())
 
+        self.room_2.check_in_guest(self.guest_2)
+        self.assertEqual("Milo", self.room_2.guest_list[0].name)
+        self.assertEqual(1, self.room_2.guest_count())
+    
+    # def test_room_can_check_in_guests(self):
+
+        self.room_3.check_in_guest(self.guest_3)
+        self.room_3.check_in_guest(self.guest_4)
+        self.assertEqual("Fin", self.room_3.guest_list[0].name)
+        self.assertEqual("Camyla", self.room_3.guest_list[1].name)
+        self.assertEqual(2, self.room_3.guest_count())
+
+        self.room_4.check_in_guest(self.guest_1)
+        self.room_4.check_in_guest(self.guest_2)
+        self.room_4.check_in_guest(self.guest_3)
+        self.room_4.check_in_guest(self.guest_4)
+        self.assertEqual("Lou", self.room_4.guest_list[0].name)
+        self.assertEqual("Milo", self.room_4.guest_list[1].name)
+        self.assertEqual("Fin", self.room_4.guest_list[2].name)
+        self.assertEqual("Camyla", self.room_4.guest_list[3].name)
+        self.assertEqual(4, self.room_4.guest_count())
+
+
+
+    # def test_till_increses_by_each_entry_fee(self):
+    #     self.
