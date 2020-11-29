@@ -6,8 +6,8 @@ class Guest:
         self.fav_song_title = fav_song_title
         self.fav_song_artist = fav_song_artist
 
-    def pay(self):
-        pass
+    def pay_room_entry(self, room):
+        return self.budget - room.entry_price
 
     def pick_song(self):
         pass

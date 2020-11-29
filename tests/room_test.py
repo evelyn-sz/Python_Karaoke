@@ -8,7 +8,7 @@ class TestRoom(unittest.TestCase):
     def setUp(self):
         self.song_1 = Song("Trio Sonata in D Minor", "Antonio Vivaldi", "classical")
         self.song_2 = Song("Eppur si muove", "Haggard", "orchestral death metal")
-        self.song_3 = Song("Three white horses", "Andrew Bird", "multiinstrumental")
+        self.song_3 = Song("Three white horses", "Andrew Bird", "indie")
         self.song_4 = Song("Spiriteaux", "Tony Anderson", "cinematic")
         self.guest_1 = Guest("Lou", 30, "Indifferent Suns", "Dark Tranquillity")
         self.guest_2 = Guest("Milo", 47, "Selig", "Helium Vola")
@@ -63,5 +63,3 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Lou", self.room_1.guest_list[0].name)
         self.assertEqual(1, self.room_1.guest_count())
 
-        # You need to assert for the Lou guest object, 
-        # or add .name to the [0] list item object
