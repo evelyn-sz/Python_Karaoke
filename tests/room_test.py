@@ -117,3 +117,7 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(211, self.room_1.collect_entry_fee())
         self.assertEqual(88, self.room_3.collect_entry_fee())
         self.assertEqual(99, self.room_4.collect_entry_fee())
+
+    def test_room_can_play_song(self):
+        self.assertEqual("Currently playing: Trio Sonata in D Minor by Antonio Vivaldi", self.room_1.play_song())
+        

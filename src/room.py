@@ -31,7 +31,7 @@ class Room:
         return self.till + self.entry_price
 
     def play_song(self):
-        pass
+        return f"Currently playing: {self.song_played_title} by {self.song_played_artist}"
 
     def refuse_entry(self):
         pass
