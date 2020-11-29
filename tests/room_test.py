@@ -10,10 +10,10 @@ class TestRoom(unittest.TestCase):
         self.song_2 = Song("Eppur si muove", "Haggard", "orchestral death metal")
         self.song_3 = Song("Three white horses", "Andrew Bird", "indie")
         self.song_4 = Song("Spiriteaux", "Tony Anderson", "cinematic")
-        self.guest_1 = Guest("Lou", 30, "Indifferent Suns", "Dark Tranquillity")
-        self.guest_2 = Guest("Milo", 47, "Selig", "Helium Vola")
-        self.guest_3 = Guest("Fin", 50, "Three white horses", "Andrew Bird")
-        self.guest_4 = Guest("Camyla", 40, "Spiriteaux", "Tony Anderson")
+        self.guest_1 = Guest("Lou", 30, 30, "Indifferent Suns", "Dark Tranquillity")
+        self.guest_2 = Guest("Milo", 21, 47, "Selig", "Helium Vola")
+        self.guest_3 = Guest("Fin", 15, 50, "Three white horses", "Andrew Bird")
+        self.guest_4 = Guest("Camyla", 17, 40, "Spiriteaux", "Tony Anderson")
         self.room_1 = Room("String quartet", 11, 7, 200, self.song_1.title, self.song_1.artist)
         self.room_2 = Room("Balkanarama", 7, 6, 100, self.song_2.title, self.song_2.artist)
         self.room_3 = Room("Hopsasa", 8, 5, 80, self.song_3.title, self.song_3.artist)
@@ -96,7 +96,6 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(1, self.room_3.guest_count())
         self.assertEqual(False, self.room_3.search_guest(self.guest_2))  
 
-
     def test_room_can_look_up_guest(self):
         self.room_4.check_in_guest(self.guest_1)
         self.room_4.check_in_guest(self.guest_2)
@@ -132,4 +131,3 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("The room had reached its capacity. Please try again later", self.room_4.check_capacity())
         self.assertEqual("Please come in.", self.room_1.check_capacity())
 
-    

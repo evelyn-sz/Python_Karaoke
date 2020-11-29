@@ -6,7 +6,7 @@ class TestSong(unittest.TestCase):
     def setUp(self):
         self.song_1 = Song("Trio Sonata in D Minor", "Antonio Vivaldi", "classical")
         self.song_2 = Song("Eppur si muove", "Haggard", "orchestral death metal")
-        self.song_3 = Song("Three white horses", "Andrew Bird", "multiinstrumental")
+        self.song_3 = Song("Three white horses", "Andrew Bird", "indie")
         self.song_4 = Song("Spiriteaux", "Tony Anderson", "cinematic")
 
     def test_song_has_title(self):
@@ -24,5 +24,5 @@ class TestSong(unittest.TestCase):
     def test_song_has_genre(self):
         self.assertEqual("classical", self.song_1.genre)
         self.assertEqual("orchestral death metal", self.song_2.genre)
-        self.assertEqual("multiinstrumental", self.song_3.genre)
+        self.assertEqual("indie", self.song_3.genre)
         self.assertEqual("cinematic", self.song_4.genre)
