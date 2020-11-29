@@ -58,5 +58,10 @@ class TestRoom(unittest.TestCase):
     def test_room_starts_with_no_guests(self):
         self.assertEqual(0, self.room_1.guest_count())
 
-    # def test_room_can_check_in_guest(self):
-    #     self.asserEqual("Lou", )
+    def test_room_can_check_in_guest(self):
+        self.room_1.check_in_guest(self.guest_1)
+        self.assertEqual("Lou", self.room_1.guest_list[0].name)
+        self.assertEqual(1, self.room_1.guest_count())
+
+        # You need to assert for the Lou guest object, 
+        # or add .name to the [0] list item object

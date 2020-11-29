@@ -12,8 +12,8 @@ class Room:
     def guest_count(self):
         return(len(self.guest_list))
 
-    # def check_in_guest(self, guest):
-    #     self.guest_list.append(guest)
+    def check_in_guest(self, guest):
+        self.guest_list.append(guest)
 
     def play_song(self):
         pass
@@ -23,3 +23,5 @@ class Room:
 
     def check_out_guest(self):
         pass
+
+
