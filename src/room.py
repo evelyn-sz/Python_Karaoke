@@ -15,8 +15,15 @@ class Room:
     def check_in_guest(self, guest):
         self.guest_list.append(guest)
 
+    def search_guest(self, guest_name):
+        for guest in self.guest_list:
+            if guest_name == guest.name:
+                return True
+            else:
+                return False
+
     def collect_entry_fee(self):
-        pass
+        return self.till + self.entry_price
 
     def play_song(self):
         pass
