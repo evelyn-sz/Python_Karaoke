@@ -120,4 +120,7 @@ class TestRoom(unittest.TestCase):
 
     def test_room_can_play_song(self):
         self.assertEqual("Currently playing: Trio Sonata in D Minor by Antonio Vivaldi", self.room_1.play_song())
-        
+        self.assertEqual("Currently playing: Eppur si muove by Haggard", self.room_2.play_song())
+        self.assertEqual("Currently playing: Three white horses by Andrew Bird", self.room_3.play_song())
+        self.assertEqual("Currently playing: Spiriteaux by Tony Anderson", self.room_4.play_song())
+
