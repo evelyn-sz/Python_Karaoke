@@ -33,7 +33,9 @@ class Room:
     def play_song(self):
         return f"Currently playing: {self.song_played_title} by {self.song_played_artist}"
 
-    def refuse_entry(self):
-        pass
-
+    def check_capacity(self):
+        if len(self.guest_list) >= self.capacity:
+            return  f"The room had reached its capacity. Please try again later"
+        else:
+            return f"Please come in."
 

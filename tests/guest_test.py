@@ -15,10 +15,10 @@ class TestGuest(unittest.TestCase):
         self.guest_2 = Guest("Milo", 47, "Selig", "Helium Vola")
         self.guest_3 = Guest("Fin", 50, "Three white horses", "Andrew Bird")
         self.guest_4 = Guest("Camyla", 40, "Spiriteaux", "Tony Anderson")
-        self.room_1 = Room("String quartet", 11, 20, 200, self.song_1.title, self.song_1.artist)
-        self.room_2 = Room("Balkanarama", 7, 14, 100, self.song_2.title, self.song_2.artist)
-        self.room_3 = Room("Hopsasa", 8, 16, 80, self.song_3.title, self.song_3.artist)
-        self.room_4 = Room("Zen", 9, 18, 90, self.song_4.title, self.song_4.artist)
+        self.room_1 = Room("String quartet", 11, 7, 200, self.song_1.title, self.song_1.artist)
+        self.room_2 = Room("Balkanarama", 7, 6, 100, self.song_2.title, self.song_2.artist)
+        self.room_3 = Room("Hopsasa", 8, 5, 80, self.song_3.title, self.song_3.artist)
+        self.room_4 = Room("Zen", 9, 4, 90, self.song_4.title, self.song_4.artist)
 
 
     def test_guest_has_name(self):

@@ -14,10 +14,10 @@ class TestRoom(unittest.TestCase):
         self.guest_2 = Guest("Milo", 47, "Selig", "Helium Vola")
         self.guest_3 = Guest("Fin", 50, "Three white horses", "Andrew Bird")
         self.guest_4 = Guest("Camyla", 40, "Spiriteaux", "Tony Anderson")
-        self.room_1 = Room("String quartet", 11, 20, 200, self.song_1.title, self.song_1.artist)
-        self.room_2 = Room("Balkanarama", 7, 14, 100, self.song_2.title, self.song_2.artist)
-        self.room_3 = Room("Hopsasa", 8, 16, 80, self.song_3.title, self.song_3.artist)
-        self.room_4 = Room("Zen", 9, 18, 90, self.song_4.title, self.song_4.artist)
+        self.room_1 = Room("String quartet", 11, 7, 200, self.song_1.title, self.song_1.artist)
+        self.room_2 = Room("Balkanarama", 7, 6, 100, self.song_2.title, self.song_2.artist)
+        self.room_3 = Room("Hopsasa", 8, 5, 80, self.song_3.title, self.song_3.artist)
+        self.room_4 = Room("Zen", 9, 4, 90, self.song_4.title, self.song_4.artist)
 
     def test_room_has_room_name(self):
         self.assertEqual("String quartet", self.room_1.room_name)
@@ -32,10 +32,10 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(9, self.room_4.entry_price)
 
     def test_room_has_capacity(self):
-        self.assertEqual(20, self.room_1.capacity)
-        self.assertEqual(14, self.room_2.capacity)
-        self.assertEqual(16, self.room_3.capacity)
-        self.assertEqual(18, self.room_4.capacity)
+        self.assertEqual(7, self.room_1.capacity)
+        self.assertEqual(6, self.room_2.capacity)
+        self.assertEqual(5, self.room_3.capacity)
+        self.assertEqual(4, self.room_4.capacity)
 
     def test_room_has_till(self):
         self.assertEqual(200, self.room_1.till)
@@ -124,3 +124,9 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Currently playing: Three white horses by Andrew Bird", self.room_3.play_song())
         self.assertEqual("Currently playing: Spiriteaux by Tony Anderson", self.room_4.play_song())
 
+    def test_room_check_capacity(self):
+        self.room_4.check_in_guest(self.guest_1)
+        self.room_4.check_in_guest(self.guest_2)
+        self.room_4.check_in_guest(self.guest_3)
+        self.room_4.check_in_guest(self.guest_4)
+        self.assertEqual("The room had reached its capacity. Please try again later", self.room_4.check_capacity())
