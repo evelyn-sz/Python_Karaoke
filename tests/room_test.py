@@ -84,6 +84,19 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Camyla", self.room_4.guest_list[3].name)
         self.assertEqual(4, self.room_4.guest_count())
 
+    def test_room_can_check_out_guest(self):
+        self.room_1.check_in_guest(self.guest_1)
+        self.room_1.check_out_guest(self.guest_1)
+        self.assertEqual(0, self.room_1.guest_count())
+        self.assertEqual(False, self.room_1.search_guest(self.guest_1))
+
+        self.room_3.check_in_guest(self.guest_2)
+        self.room_3.check_in_guest(self.guest_4)
+        self.room_3.check_out_guest(self.guest_2)
+        self.assertEqual(1, self.room_3.guest_count())
+        self.assertEqual(False, self.room_3.search_guest(self.guest_2))  
+
+
     def test_room_can_look_up_guest(self):
         self.room_4.check_in_guest(self.guest_1)
         self.room_4.check_in_guest(self.guest_2)

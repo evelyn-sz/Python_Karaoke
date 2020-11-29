@@ -15,6 +15,11 @@ class Room:
     def check_in_guest(self, guest):
         self.guest_list.append(guest)
 
+    def check_out_guest(self, guest_name):
+        # for guest in self.guest_list:
+        #     if guest_name == guest.name:
+        self.guest_list.remove(guest_name)
+
     def search_guest(self, guest_name):
         for guest in self.guest_list:
             if guest_name == guest.name:
@@ -31,6 +36,4 @@ class Room:
     def refuse_entry(self):
         pass
 
-    def check_out_guest(self):
-        pass
 
