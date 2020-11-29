@@ -30,5 +30,5 @@ class TestBar(unittest.TestCase):
         self.assertEqual(120, self.bar_3.till)
         self.assertEqual(80, self.bar_4.till)
 
-    # def test_guest_is_over_18(self):
-    #     self.assertEqual(True, self.bar_1.verify_age())
+    def test_guest_is_over_18(self):
+        self.assertEqual(True, self.bar_1.verify_age(self.guest_1))
