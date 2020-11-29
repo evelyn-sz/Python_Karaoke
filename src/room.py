@@ -39,3 +39,9 @@ class Room:
         else:
             return f"Please come in."
 
+
+    def check_age(self):
+        pass
+
+    def refuse_drink_sale(self):
+        pass

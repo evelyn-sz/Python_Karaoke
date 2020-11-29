@@ -124,9 +124,12 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Currently playing: Three white horses by Andrew Bird", self.room_3.play_song())
         self.assertEqual("Currently playing: Spiriteaux by Tony Anderson", self.room_4.play_song())
 
-    def test_room_check_capacity(self):
+    def test_room_checks_capacity(self):
         self.room_4.check_in_guest(self.guest_1)
         self.room_4.check_in_guest(self.guest_2)
         self.room_4.check_in_guest(self.guest_3)
         self.room_4.check_in_guest(self.guest_4)
         self.assertEqual("The room had reached its capacity. Please try again later", self.room_4.check_capacity())
+        self.assertEqual("Please come in.", self.room_1.check_capacity())
+
+    

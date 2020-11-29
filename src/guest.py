@@ -12,5 +12,8 @@ class Guest:
     def pick_song(self):
         pass
 
-    def cheer_loudly(self):
-        pass
+    def cheer_loudly(self, room):
+        if self.fav_song_title == room.song_played_title and self.fav_song_artist == room.song_played_artist:
+            return f"Woohooo!"
+        else:
+            return f"Meh..."

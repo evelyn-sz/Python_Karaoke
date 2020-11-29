@@ -50,3 +50,10 @@ class TestGuest(unittest.TestCase):
         self.assertEqual(40, self.guest_2.pay_room_entry(self.room_2))
         self.assertEqual(42, self.guest_3.pay_room_entry(self.room_3))
         self.assertEqual(31, self.guest_4.pay_room_entry(self.room_4))
+
+    def test_guest_cheers_if_fav_song(self):
+        self.assertEqual("Meh...", self.guest_1.cheer_loudly(self.room_1))
+        self.assertEqual("Meh...", self.guest_2.cheer_loudly(self.room_2))
+        self.assertEqual("Woohooo!", self.guest_3.cheer_loudly(self.room_3))
+        self.assertEqual("Woohooo!", self.guest_4.cheer_loudly(self.room_4))
+        
